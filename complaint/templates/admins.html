@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Admin Portal</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="http://www.iitj.ac.in">IIT Jodhpur</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <a class="btn btn-outline-info" href="/login" role="button">Login</a>
+    </div>
+  </nav>
+
+
+  {% load static %}
+  <div class="row">
+    <div class="col-lg-2">
+      <img src='{%static "Images/front.png" %}' widht='110px' height='110px' alt="...">
+    </div>
+    <div class="col-lg-6">
+      <br>
+      <h1>Admin Portal</h1>
+    </div>
+    <div class="col-lg-2">
+      <a href='{%static "complaint/data.html" %}'>
+        <br>
+
+        <button type="button" class="btn btn-danger">Active Complaints</button>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href='{%static "complaint/data2.html" %}'>
+        <br>
+
+        <button type="button" class="btn btn-success">All Complaints</button>
+      </a>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="container">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1dvPyORnyUXDRSsA4z7sffctiU3cFS4h5" width="640"
+          height="480"></iframe>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <h5>Type The Id Which Is Solved</h5>
+      <form action='admins' method='post'>{% csrf_token %}
+        <label for="validationCustom06">ID</label>
+        <input type="text" class="form-control" name='value' id="value" required>
+        <div class="invalid-feedback">
+          Please provide a Id.
+        </div>
+        <button class="btn btn-primary" name='submit' value="Pressed" type="submit">Submit form</button>
+      </form>
+      <br>
+      <h2>&#8592; Location of all street lights are &nbsp; &nbsp; &nbsp; &nbsp; shown in the given map.</h2>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
