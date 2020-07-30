@@ -8,7 +8,7 @@ It includes features like-
 2) Backend is in Django Framework.
 3) Landing page has complaint button and login button.
 4) By clicking Complaint button, user can register their complaint through a form and the complaint is sended to the respective authorities. And User also get a confirmation email, with their respective complaint ID.
-5) By clicking Login button, respective authorities members can redirect to the admin page in which they can see all the active complaints or can modify or delete the complaint and get the exact position of all the street lights.
+5) By clicking Login button, respective authorities members can redirect to the admin page in which they can see all the active complaints, can modify or delete the complaints,    can get the exact location of all the street lights on a map.
 6) And, when the complaint gets resolved the user again get's an confirmation email.
 
 Please use this website only on laptop/desktop as it is not responsive.
